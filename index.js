@@ -229,7 +229,7 @@ function filterByExchange(stock, exchange) {
 
 //Endpoint 4: Filter the stocks based on the Industrial Sector.
 app.get('/stock/filter/industry', (req, res) => {
-  let industry = req.query.industry.toLowerCase();
+  let industry = req.query.industry;
   let sortedStocks = stocks.filter((stock) =>
     filterByIndustry(stock, industry)
   );
